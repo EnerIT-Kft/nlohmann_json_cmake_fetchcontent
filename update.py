@@ -38,6 +38,7 @@ for tag, url, body in release_url_map[::-1]:
       os.system("git clone https://github.com/nlohmann/json ./tmp --depth 1 --branch {}".format(tag));
       os.system("cp -rf ./tmp/single_include .")
       os.system("cp -rf ./tmp/include/nlohmann/json_fwd.hpp ./single_include/nlohmann/")
+      os.system("cp -rf ./tmp/include/ ./include/")
       os.system("cp -rf ./tmp/cmake .")
       os.system("cp -rf ./tmp/CMakeLists.txt .")
       os.system("cp -rf ./tmp/meson.build .")
